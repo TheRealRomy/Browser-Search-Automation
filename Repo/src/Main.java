@@ -3,13 +3,10 @@ import java.net.URI;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-
-        int[] testArray = new int[args.length];
-        System.out.print(testArray);
         
-        for(int i = 0; i< args.length; i++) {
-			System.out.print(args[i]);
-		}
+        for(int i = 0; i<args.length; i++) {
+            System.out.println("args[" + i + "]: " + args[i]);
+        }
         // Opens the specific URL in the browser 
 
         // String url = "https://www.youtube.com";
