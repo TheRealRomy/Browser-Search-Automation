@@ -9,17 +9,19 @@ public class Automate {
         String url = "https://www.google.com/search?q=";
         String validWebsites[] = {"stackoverflow.com", "reddit.com", "geekforgeeks.com"};
 
+        String testQuerry = System.console().readLine();
 
+        String testArray[] = testQuerry.split(" ");
         // Copies the array of strings from the terminal
-        String query[] = new String[args.length];
+        String query[] = new String[testArray.length];
 
-        for (int i = 0; i < args.length; i++) {
-            query[i] = args[i];
+        for (int i = 0; i < testArray.length; i++) {
+            query[i] = testArray[i];
         }
 
         if (query.length == 0) {
             System.out.print("Error: Please enter a proper search query, Romy.");
-            System.out.print("URL" + query);
+            System.out.print("URL: " + query);
         } 
         else {
             StringBuffer sb = new StringBuffer();
