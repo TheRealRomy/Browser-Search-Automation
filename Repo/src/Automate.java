@@ -9,14 +9,15 @@ public class Automate {
         String url = "https://www.google.com/search?q=";
         String validWebsites[] = {"stackoverflow.com", "reddit.com", "geekforgeeks.com"};
 
-        String testQuerry = System.console().readLine();
+        // Takes input from 
+        String cmdArgs = System.console().readLine();
+        String cmdArgsInput[] = cmdArgs.split(" ");
 
-        String testArray[] = testQuerry.split(" ");
         // Copies the array of strings from the terminal
-        String query[] = new String[testArray.length];
+        String query[] = new String[cmdArgsInput.length];
 
-        for (int i = 0; i < testArray.length; i++) {
-            query[i] = testArray[i];
+        for (int i = 0; i < cmdArgsInput.length; i++) {
+            query[i] = cmdArgsInput[i];
         }
 
         if (query.length == 0) {
